@@ -1,0 +1,109 @@
+/* Pro Tip: Use Relative Units (rem, em, %, vh/vw) or Flex/Grid logic. */
+
+:root{
+    --primary-color: lightblue;
+    --bg-dark: black;
+    --color: snow;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: ; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* 💿header */
+header{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding: 20px;
+    border-bottom: 2px solid var(--bg-dark);
+}
+
+
+/* 💿header hover */
+header:hover > i{
+    color: red;
+    transition: 0.3s ease-in-out;
+}
+
+/* 📀header text */
+header> a{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* 🚀color-nav */
+.nav{
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid var(--bg-dark);
+}
+
+
+/* 🚀color-content */
+.nav > *{
+    display: flex;
+    padding: 10px;
+}
+
+
+/* 🚀color-hover */
+.color:hover {
+    background-color: var(--primary-color);
+    color: var(--color);
+}
+
+/* 🚀Responsiveness */
+@media (max-width: 600px) {
+    .nav{
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .nav > *{
+        justify-content: center;
+    }
+}
+
+
+/* 👁️left-nav */
+.left-nav{
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid black;
+    text-align:start;
+    width: 100px;
+    height: 200vh;
+}
+
+
+/* 👁️left content */
+.left-nav> *{
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+
+/* 👁️left-hover */
+.left:hover{
+    background-color: var(--primary-color);
+    color: var(--color);
+}
+
+/* 👁️dark or light */
+.left-nav > i{
+    margin-top: auto;
+    padding-left: 40px;
+    text-align: center;
+}
+
